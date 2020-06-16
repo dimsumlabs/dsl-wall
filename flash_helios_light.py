@@ -18,7 +18,8 @@ def change_ceiling_color(light_host, red, green, blue):
 
     print('request begin to {}'.format(request_url))
     req = request.Request(request_url, method='POST')
-    res = request.urlopen(req)
+    # timeout after 1 second as the light might be turned off
+    res = request.urlopen(req, data=None, timeout=1)
     body = res.read()
     print('res body: ' + str(body))
 
