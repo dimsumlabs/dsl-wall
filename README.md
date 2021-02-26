@@ -1,4 +1,4 @@
-*dsl-wall* is a IRC client setup which auto starts on a Raspberry Pi
+*dsl-wall* is an IRC client setup which auto starts on a Raspberry Pi
 Zero. On certain user actions, hooks are executed which trigger
 devices in the space.
 
