@@ -1,6 +1,6 @@
 *dsl-wall* is an IRC client setup which auto starts on a Raspberry Pi
-Zero. On certain user actions, hooks are executed which trigger
-devices in the space.
+Zero. On certain user actions, hooks are executed. They trigger
+devices in the space, such as the lights or a printer.
 
 See also our wiki entry about [IRC][1].
 
