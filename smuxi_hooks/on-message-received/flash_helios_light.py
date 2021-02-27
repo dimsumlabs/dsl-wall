@@ -9,7 +9,7 @@ import os
 import sys
 import time
 
-dnd_file = open("~/dsl-wall/smuxi_scripting_fun/dnd_expire_epoch.txt", "r")
+dnd_file = open("../../smuxi_scripting_fun/dnd_expire_epoch.txt", "r")
 dnd_on = int(dnd_file.read().strip()) > time.time()
 
 def change_ceiling_color(light_host, red, green, blue):
