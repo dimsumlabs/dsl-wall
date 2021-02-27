@@ -2,10 +2,6 @@
 
 # A Smuxi hook script. This hooks flashes the ceiling light when a new message
 # on the #dimsumlabs channel was received.
-#
-# Usage: put this script in
-# ~/.local/share/smuxi/hooks/engine/protocol-manager/on-message-received/
-# and chmod +x it
 
 from urllib import request
 from time import sleep
@@ -13,7 +9,7 @@ import os
 import sys
 import time
 
-dnd_file = open("/home/pi/smuxi_scripting_fun/dnd_expire_epoch.txt", "r")
+dnd_file = open("~/dsl-wall/smuxi_scripting_fun/dnd_expire_epoch.txt", "r")
 dnd_on = int(dnd_file.read().strip()) > time.time()
 
 def change_ceiling_color(light_host, red, green, blue):

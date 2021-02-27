@@ -29,7 +29,5 @@ if msg.find("dnd lights ") == 0 and chatroom == "#dimsumlabs" and sender == "dsl
 
     dnd_expire = int(time.time()) + dnd_seconds
 
-    os.system("cd ~/smuxi_scripting_fun; echo " + str(dnd_expire) + " > dnd_expire_epoch.txt")
+    os.system("cd ~/dsl-wall/smuxi_scripting_fun; echo " + str(dnd_expire) + " > dnd_expire_epoch.txt")
     print("Session.Command /echo dnd mode enabled until " + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(dnd_expire)))
-
-

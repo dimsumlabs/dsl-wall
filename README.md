@@ -18,15 +18,14 @@ Setup
  
  4. Clone to: `~/dsl-wall`
  
- 5. Set up configuration:
+ 5. Link configuration:
  
         ln -s ~/dsl-wall/.bash_profile ~
-        ln -s ~/dsl-wall/smuxi_scripting_fun ~
         ln -s ~/dsl-wall/.gtkrc-2.0 ~
         ln -s ~/dsl-wall/.xsession ~
         ln -s ~/dsl-wall/smuxi_config ~/.config/smuxi
-
- 6. Symlink the Smuxi hooks into: `~/.local/share/smuxi/hooks/`
+        ln -s ~/dsl-wall/smuxi_hooks/* \
+            ~/.local/share/smuxi/hooks/engine/protocol-manager
 
 [1]: https://wiki.dimsumlabs.com/IRC
 [2]: https://smuxi.im/

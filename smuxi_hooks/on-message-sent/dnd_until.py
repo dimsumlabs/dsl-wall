@@ -1,1 +1,1 @@
-/home/pi/smuxi_scripting_fun/dnd_until.py
+../../smuxi_scripting_fun/dnd_until.py
