@@ -9,3 +9,5 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
         echo "WARNING: The repo $REPO has uncommitted changes!"
     fi
 )
+
+. "$HOME/.bashrc"
