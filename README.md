@@ -26,6 +26,14 @@ Setup
         ln -s ~/dsl-wall/smuxi_config ~/.config/smuxi
         ln -s ~/dsl-wall/smuxi_hooks/* \
             ~/.local/share/smuxi/hooks/engine/protocol-manager
+            
+            
+DND
+===
+
+The idea of DND, the do-not-disturb mode, is to turn off the blinking
+for a while. It needs to be activated from the command line from the
+directory `smuxi_scripting_fun`.
 
 [1]: https://wiki.dimsumlabs.com/IRC
 [2]: https://smuxi.im/
