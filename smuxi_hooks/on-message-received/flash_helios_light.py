@@ -8,9 +8,14 @@ from time import sleep
 import os
 import sys
 import time
+from os.path import exists
 
-dnd_file = open("/home/pi/dsl-wall/smuxi_scripting_fun/dnd_expire_epoch.txt", "r")
-dnd_on = int(dnd_file.read().strip()) > time.time()
+DND_TIME_FILENAME="/home/pi/dsl-wall/smuxi_scripting_fun/dnd_expire_epoch.txt"
+if exists(DND_TIME_FILENAME) == True:
+    dnd_file = open(DND_TIME_FILENAME, "r")
+    dnd_on = int(dnd_file.read().strip()) > time.time()
+else:
+    dnd_on = False
 
 def change_ceiling_color(light_host, red, green, blue):
     color_url = 'rgb.lua?r={}&g={}&b={}'.format(red, green, blue)
