@@ -11,16 +11,14 @@ if [ "$SMUXI_CHAT_ID" != "#dimsumlabs" ]; then
     exit 0
 fi
 
-DEVICE=/dev/usb/lp0
-
 # Sends ESC/P command
 send_esc() {
-	echo -en "\x1b$1" >$DEVICE
+	echo -en "\x1b$1" | lpr
 }
 
 echo -n "$SMUXI_MSG_TIMESTAMP_ISO_LOCAL " >$DEVICE
 send_esc 4 # Select italic
-echo -n "$SMUXI_SENDER " >$DEVICE
+echo -n "$SMUXI_SENDER " | lpr
 send_esc 5 # Cancel italic
 echo $SMUXI_MSG \
 	| iconv -f utf-8 -t 437 -c \
