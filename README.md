@@ -27,6 +27,22 @@ Setup
         ln -s ~/dsl-wall/smuxi_hooks/* \
             ~/.local/share/smuxi/hooks/engine/protocol-manager
             
+ 6. Install `lprng`:
+ 
+        sudo apt install lprng
+
+    And create `/etc/printcap` for our [printer][3]:
+ 
+        lq590|localprinter:\
+        :lp=/dev/usb/lp0:\
+        :sd=/var/spool/lpd/lq590:\
+        :mx#0:\
+        :sh:
+
+    Followed by:
+    
+        sudo service lprng restart
+            
             
 DND
 ===
@@ -37,3 +53,4 @@ directory `smuxi_scripting_fun`.
 
 [1]: https://wiki.dimsumlabs.com/IRC
 [2]: https://smuxi.im/
+[3]: https://wiki.dimsumlabs.com/Computer-Lab
