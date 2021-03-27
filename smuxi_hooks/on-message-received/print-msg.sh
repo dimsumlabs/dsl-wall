@@ -16,10 +16,10 @@ send_esc() {
 	echo -en "\x1b$1" | lpr
 }
 
-echo -n "$SMUXI_MSG_TIMESTAMP_ISO_LOCAL " >$DEVICE
+echo -n "$SMUXI_MSG_TIMESTAMP_ISO_LOCAL " | lpr
 send_esc 4 # Select italic
 echo -n "$SMUXI_SENDER " | lpr
 send_esc 5 # Cancel italic
 echo $SMUXI_MSG \
 	| iconv -f utf-8 -t 437 -c \
-	>$DEVICE
+        | lpr
