@@ -32,13 +32,17 @@ if os.environ['SMUXI_MSG_TYPE'] != "Normal" or os.environ['SMUXI_CHAT_ID'] != "#
     sys.exit(0)
 
 helios_service = 'http://helios/'
-helios2_service = 'http://helios2/'
+#helios2_service = 'http://helios2/'
+# HACK: disable helios2 as it is broken and needs repair. The HTTP/REST call
+# just hang forever...
+helios2_service = None
 
 # color value range 0 to 1024
 light_pink = (7, 751, 130)
 light_green = (783, 7, 652)
 change_ceiling_color(helios_service, *light_green)
-change_ceiling_color(helios2_service, *light_green)
+if helios2_service:
+    change_ceiling_color(helios2_service, *light_green)
 
 # sleep for 1 second to give time for the color transition to complete
 sleep(1)
@@ -46,5 +50,6 @@ sleep(1)
 # WTF: 0 is brightest value, lulz
 white = (0, 0, 0)
 change_ceiling_color(helios_service, *white)
-change_ceiling_color(helios2_service, *white)
+if helios2_service:
+    change_ceiling_color(helios2_service, *white)
 
