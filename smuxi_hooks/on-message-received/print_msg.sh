@@ -22,4 +22,4 @@ echo -n "$SMUXI_SENDER " | lpr
 send_esc 5 # Cancel italic
 echo $SMUXI_MSG \
 	| iconv -f utf-8 -t 437 -c \
-        | lpr
+        | lpr &
