@@ -31,8 +31,8 @@ def change_ceiling_color(light_host, red, green, blue):
 if os.environ['SMUXI_MSG_TYPE'] != "Normal" or os.environ['SMUXI_CHAT_ID'] != "#dimsumlabs" or dnd_on:
     sys.exit(0)
 
-helios_service = 'http://helios.lan/'
-helios2_service = 'http://helios2.lan/'
+helios_service = 'http://helios/'
+helios2_service = 'http://helios2/'
 
 # color value range 0 to 1024
 light_pink = (7, 751, 130)
