@@ -2,6 +2,10 @@
 
 # A Smuxi hook script. This hooks flashes the ceiling light when a new message
 # on the #dimsumlabs channel was received.
+#
+# Copyright (C) 2021 Mirco Bauer <meebey@meebey.net>
+# Copyright (C) 2021 Neil Pahl <neildaemond@gmail.com>
+# Copyright (C) 2021 Felix E. Klee <felix.klee@inka.de>
 
 from urllib import request
 from time import sleep
