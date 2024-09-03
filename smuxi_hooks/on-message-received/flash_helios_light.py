@@ -54,7 +54,7 @@ def change_ceiling_color(light_host, red, green, blue):
 if os.environ['SMUXI_MSG_TYPE'] != "Normal" or os.environ['SMUXI_CHAT_ID'] != "#dimsumlabs" or dnd_on:
     sys.exit(0)
 
-helios_service = 'http://helios.in.dimsumlabs.com/'
+helios_service = 'http://helios2.in.dimsumlabs.com/'
 #helios2_service = 'http://helios2.in.dimsumlabs.com/'
 # HACK: disable helios2 as it is broken and needs repair. The HTTP/REST call
 # just hang forever...

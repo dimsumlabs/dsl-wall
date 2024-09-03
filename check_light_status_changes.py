@@ -27,7 +27,7 @@ from urllib import request
 import os
 import time
 
-helios_rest_service = 'http://helios.in.dimsumlabs.com'
+helios_rest_service = 'http://helios2.in.dimsumlabs.com'
 previous_light_state_file_path = '$HOME/.helios_light_state'
 
 def is_light_on(helios_host):
